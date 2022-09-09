@@ -1,0 +1,6 @@
+Student:
+Oleg
+16
+Student:
+Egor
+54

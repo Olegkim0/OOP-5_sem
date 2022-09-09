@@ -3,22 +3,26 @@
 
 class KimStudent
 {
+private:
+	std::string _name;
+	int _age;
+
 public:
 	KimStudent();
+
 	KimStudent(std::string name, int age);
+	
+	~KimStudent();
+	
 	void input();
+
 	void output();
-	void writeToFile();
-	void readFromFile();
+	
+	void writeToFile(std::string fileName);
+	
+	KimStudent readFromFile(std::string fileName);
 
-private:
+	std::string getName();
 
+	int getAge();
 };
-
-KimStudent::KimStudent()
-{
-}
-
-KimStudent::~KimStudent()
-{
-}
