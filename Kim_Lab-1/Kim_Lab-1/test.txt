@@ -1,6 +1,6 @@
 Student:
+Egor
+213
+Student:
 Oleg
 16
-Student:
-Egor
-54

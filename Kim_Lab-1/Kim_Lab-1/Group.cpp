@@ -33,7 +33,9 @@ void Group::readFromFile(std::string fileName)
 			file >> name;
 			file >> age;
 
-			Group::addStudent(KimStudent(name, age));
+			if (name != "") {
+				Group::addStudent(KimStudent(name, age));
+			}
 		}
 	}
 }
@@ -46,9 +48,7 @@ void Group::writeToFile(std::string fileName)
 	file.open(fileName);
 
 	if (file.good()) {
-		
 		for (int i = 0; i < Group::vectorOfStudents.size(); i++) {
-
 			file << "Student:\n";
 			file << Group::vectorOfStudents.at(i).getName() << "\n";
 			file << Group::vectorOfStudents.at(i).getAge() << "\n";
