@@ -49,21 +49,14 @@ void KimStudent::writeToFile(std::ofstream& file)
 
 KimStudent* KimStudent::readFromFile(std::ifstream& file)
 {
-    std::string type;
     std::string name;
     int age;
     float avgScore;
 
     if (file.good()) {
-        file >> type;
-        if (type == "Student:") {
-            file >> name;
-            file >> age;
-            file >> avgScore;
-        }
-        else {
-            return new KimStudent();
-        }
+        file >> name;
+        file >> age;
+        file >> avgScore;
     }
     else {
         std::cout << "File not found 404 :(";

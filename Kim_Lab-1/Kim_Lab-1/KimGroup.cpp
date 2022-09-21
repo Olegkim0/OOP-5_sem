@@ -21,8 +21,14 @@ void KimGroup::readFromFile(std::string fileName)
 	file.open(fileName);
 	
 	if (file.good()) {
+		std::string type;
+		file >> type;
+
 		while (!file.eof()) {
-			KimGroup::addStudent(KimStudent::readFromFile(file));
+			if (type == "Student:") {
+				KimGroup::addStudent(KimStudent::readFromFile(file));
+			}
+			file >> type;
 		}
 	}
 	else {
