@@ -7,6 +7,7 @@ public:
 	
 	static int inputInteger();
 
-	static int choose(int number);
+	static double inputDouble();
 
+	static int choose(int number);
 };

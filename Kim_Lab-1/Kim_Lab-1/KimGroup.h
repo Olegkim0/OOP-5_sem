@@ -3,12 +3,12 @@
 #include "KimStudent.h"
 
 
-class Group {
+class KimGroup {
 private:
-	std::vector<KimStudent> vectorOfStudents;
+	std::vector<KimStudent*> vectorOfStudents;
 
 public:
-	void addStudent(KimStudent student);
+	void addStudent(KimStudent* student);
 
 	void output();
 
@@ -17,5 +17,4 @@ public:
 	void writeToFile(std::string fileName);
 
 	void clear();
-
 };

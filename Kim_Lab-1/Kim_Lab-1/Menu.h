@@ -1,7 +1,7 @@
 #pragma once
 #include <string>
 #include "KimStudent.h"
-#include "Group.h"
+#include "KimGroup.h"
 
 class Menu
 {
@@ -18,5 +18,5 @@ public:
 	void clear();
 
 private:
-	Group group;
+	KimGroup KimGroup;
 };

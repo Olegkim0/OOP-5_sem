@@ -27,6 +27,20 @@ int Utils::inputInteger() {
     return -1;
 }
 
+double Utils::inputDouble() {
+    std::string str;
+    std::cin.ignore();
+    std::cin >> str;
+    if (str.find_first_not_of("0123456789.") != std::string::npos || str.length() == count(str.begin(), str.end(), '.')) {
+        std::cout << "Wrong input\n";
+        std::cout << "Try again: \n";
+    }
+    else {
+        return stod(str);
+    }
+    return -1;
+}
+
 int Utils::choose(int number) {
     int result;
     do {

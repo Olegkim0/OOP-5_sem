@@ -6,11 +6,12 @@ class KimStudent
 private:
 	std::string _name;
 	int _age;
+	float _avgScore;
 
 public:
 	KimStudent();
 
-	KimStudent(std::string name, int age);
+	KimStudent(std::string name, int age, float avgScore);
 	
 	~KimStudent();
 	
@@ -18,11 +19,13 @@ public:
 
 	void output();
 	
-	void writeToFile(std::string fileName);
+	void writeToFile(std::ofstream& fileName);
 	
-	KimStudent readFromFile(std::string fileName);
+	static KimStudent* readFromFile(std::ifstream& file);
 
 	std::string getName();
 
 	int getAge();
+
+	float getAvgScore();
 };

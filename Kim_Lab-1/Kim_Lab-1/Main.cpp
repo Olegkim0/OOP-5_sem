@@ -1,5 +1,5 @@
 #pragma once
-#include "Group.h"
+#include "KimGroup.h"
 #include "Utils.h"
 #include <iostream>
 
@@ -7,8 +7,8 @@ using namespace std;
 
 int main()
 {
-    Group group = Group();
-    KimStudent student;
+    KimGroup group = KimGroup();
+    KimStudent* student;
     std::string fileName;
 
     while (true) {
@@ -18,7 +18,8 @@ int main()
             std::cout << "\nExit\n";
             return 0;
         case 1:
-            student.input();
+            student = new KimStudent();
+            (student)->input();
             group.addStudent(student);
             break;
         case 2:
