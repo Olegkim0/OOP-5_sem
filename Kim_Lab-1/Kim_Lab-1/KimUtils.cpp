@@ -1,8 +1,8 @@
-#include "Utils.h"
+#include "KimUtils.h"
 #include <iostream>
 #include <string>
 
-void Utils::printMenu()
+void KimUtils::printMenu()
 {
 	std::cout << "\n\nMenu:\n";
 	std::cout << "1. Add Student\n";
@@ -13,7 +13,7 @@ void Utils::printMenu()
 	std::cout << "0. Exit\n\n";
 }
 
-int Utils::inputInteger() {
+int KimUtils::inputInteger() {
     std::string str;
 
     std::cin >> str;
@@ -27,7 +27,7 @@ int Utils::inputInteger() {
     return -1;
 }
 
-double Utils::inputDouble() {
+double KimUtils::inputDouble() {
     std::string str;
     std::cin.ignore();
     std::cin >> str;
@@ -41,7 +41,7 @@ double Utils::inputDouble() {
     return -1;
 }
 
-int Utils::choose(int number) {
+int KimUtils::choose(int number) {
     int result;
     do {
         result = inputInteger();

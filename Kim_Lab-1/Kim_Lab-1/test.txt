@@ -10,3 +10,11 @@ Student:
 Irina
 20
 4.2
+Student:
+Alexander
+19
+4.5
+Student:
+Ulyana
+20
+5

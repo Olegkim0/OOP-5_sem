@@ -3,6 +3,10 @@ Oleg
 20
 4
 Student:
+Oleg
+20
+4
+Student:
 Egor
 24
 4.8
@@ -11,10 +15,10 @@ Irina
 20
 4.2
 Student:
-Oleg
-20
-4
+Alexander
+19
+4.5
 Student:
-Egor
-24
-4.8
+Ulyana
+20
+5

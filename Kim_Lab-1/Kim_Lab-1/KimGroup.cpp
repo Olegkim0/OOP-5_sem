@@ -35,7 +35,6 @@ void KimGroup::readFromFile(std::string fileName)
 		std::cout << "File not found 404 :(";
 	}
 	file.close();
-	KimGroup::vectorOfStudents.pop_back();
 }
 
 void KimGroup::writeToFile(std::string fileName)

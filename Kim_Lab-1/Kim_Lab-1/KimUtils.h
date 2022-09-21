@@ -1,6 +1,6 @@
 #pragma once
 
-static class Utils {
+static class KimUtils {
 
 public:
 	static void printMenu();

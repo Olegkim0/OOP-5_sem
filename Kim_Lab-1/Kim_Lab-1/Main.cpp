@@ -1,6 +1,6 @@
 #pragma once
 #include "KimGroup.h"
-#include "Utils.h"
+#include "KimUtils.h"
 #include <iostream>
 
 using namespace std;
@@ -12,8 +12,8 @@ int main()
     std::string fileName;
 
     while (true) {
-        Utils::printMenu();
-        switch (Utils::choose(5)) {
+        KimUtils::printMenu();
+        switch (KimUtils::choose(5)) {
         case 0:
             std::cout << "\nExit\n";
             return 0;

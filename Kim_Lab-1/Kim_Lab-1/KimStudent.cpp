@@ -4,7 +4,7 @@
 #include <list>
 #include "KimStudent.h"
 #include "KimGroup.h"
-#include "Utils.h"
+#include "KimUtils.h"
 
 KimStudent::KimStudent()
 {
@@ -22,9 +22,9 @@ void KimStudent::input() {
     std::cout << "Input name:";
     std::cin >> _name;
     std::cout << "Input age:";
-    _age = Utils::inputInteger();
+    _age = KimUtils::inputInteger();
     std::cout << "Input average score:";
-    _avgScore = Utils::inputDouble();
+    _avgScore = KimUtils::inputDouble();
 }
 
 void KimStudent::output() {
@@ -49,20 +49,19 @@ void KimStudent::writeToFile(std::ofstream& file)
 
 KimStudent* KimStudent::readFromFile(std::ifstream& file)
 {
-    std::string name;
-    int age;
-    float avgScore;
+
+    KimStudent* student = new KimStudent();
 
     if (file.good()) {
-        file >> name;
-        file >> age;
-        file >> avgScore;
+        file >> student->_name;
+        file >> student->_age;
+        file >> student->_avgScore;
     }
     else {
         std::cout << "File not found 404 :(";
     }
 
-    return new KimStudent(name, age, avgScore);
+    return student;
 }
 
 std::string KimStudent::getName()
