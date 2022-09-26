@@ -3,7 +3,7 @@
 #include "KimStudent.h"
 #include "KimGroup.h"
 
-class Menu
+class KimMenu
 {
 private:
 	KimGroup group = KimGroup();

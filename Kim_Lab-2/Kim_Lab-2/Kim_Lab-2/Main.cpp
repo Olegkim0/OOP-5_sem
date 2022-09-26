@@ -2,13 +2,13 @@
 #include "KimGroup.h"
 #include "KimUtils.h"
 #include <iostream>
-#include "Menu.h"
+#include "KimMenu.h"
 
 using namespace std;
 
 int main()
 {
-    Menu menu = Menu();
+    KimMenu menu = KimMenu();
 
     while (true) {
         KimUtils::printMenu();

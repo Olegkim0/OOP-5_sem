@@ -1,26 +1,26 @@
-#include "Menu.h"
+#include "KimMenu.h"
 #include <iostream>
 
-void Menu::addStudent()
+void KimMenu::addStudent()
 {
     student = new KimStudent();
     (student)->input();
     group.addStudent(student);
 }
 
-void Menu::output()
+void KimMenu::output()
 {
     group.output();
 }
 
-void Menu::readFromFile()
+void KimMenu::readFromFile()
 {
     std::cout << "Input file name:\n";
     std::cin >> fileName;
     group.writeToFile(fileName);
 }
 
-void Menu::writeToFile()
+void KimMenu::writeToFile()
 {
     std::cout << "Input file name:\n";
     std::cin >> fileName;
@@ -28,7 +28,7 @@ void Menu::writeToFile()
 
 }
 
-void Menu::clear()
+void KimMenu::clear()
 {
     group.clear();
 }
