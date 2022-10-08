@@ -35,11 +35,6 @@ void KimGroup::writeToFile(std::string fileName) {
 	CArchive arch(&file, CArchive::store);
 	arch << vectorOfStudents.size();
 	for (auto student : vectorOfStudents) {
-		KimStudent* test = student.get();
-		
-		std::cout << test;
-		std::cout << "\n";
-
 		arch << student.get();
 	}
 	arch.Close();
