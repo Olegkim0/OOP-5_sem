@@ -45,7 +45,7 @@
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
-    <CharacterSet>Unicode</CharacterSet>
+    <CharacterSet>MultiByte</CharacterSet>
     <UseOfMfc>Dynamic</UseOfMfc>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
@@ -143,6 +143,7 @@
     <ClInclude Include="Kim-lab-2.h" />
     <ClInclude Include="KimElder.h" />
     <ClInclude Include="KimGroup.h" />
+    <ClInclude Include="KimMenu.h" />
     <ClInclude Include="KimStudent.h" />
     <ClInclude Include="KimUtils.h" />
     <ClInclude Include="pch.h" />
@@ -153,6 +154,7 @@
     <ClCompile Include="Kim-lab-2.cpp" />
     <ClCompile Include="KimElder.cpp" />
     <ClCompile Include="KimGroup.cpp" />
+    <ClCompile Include="KimMenu.cpp" />
     <ClCompile Include="KimStudent.cpp" />
     <ClCompile Include="KimUtils.cpp" />
     <ClCompile Include="pch.cpp">

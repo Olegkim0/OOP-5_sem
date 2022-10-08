@@ -5,8 +5,10 @@ KimStudent::KimStudent()
 {
 }
 
-KimStudent::~KimStudent() {
+KimStudent::~KimStudent() 
+{
 }
+
 IMPLEMENT_SERIAL(KimStudent, CObject, 1);
 
 KimStudent::KimStudent(CString name, int age, float avgScore) {
@@ -17,23 +19,22 @@ KimStudent::KimStudent(CString name, int age, float avgScore) {
 
 
 void KimStudent::input() {
-    std::cout << "Input name:";
+    std::cout << "Input name: ";
     std::string strName;
     std::cin >> strName;
     _name = strName.c_str();
-    std::cout << "Input age:";
+    std::cout << "Input age: ";
     _age = KimUtils::inputInteger();
-    std::cout << "Input average score:";
+    std::cout << "Input average score: ";
     _avgScore = KimUtils::inputDouble();
 }
 
 void KimStudent::output() {
-    std::cout << "Student:\n"
-        << "Name is " << _name << "\n"
+    std::cout << "\nStudent:\n"
+        << "Name is " << (LPCTSTR)_name << "\n"
         << "Age is " << std::to_string(_age) << "\n"
-        << "Average score is " << std::to_string(_avgScore) << "\n\n";
+        << "Average score is " << std::to_string(_avgScore) << "\n";
 }
-
 
 void KimStudent::Serialize(CArchive& ar) {
     if (ar.IsStoring())
@@ -45,10 +46,3 @@ void KimStudent::Serialize(CArchive& ar) {
         ar >> _name >> _age >> _avgScore;
     }
 }
-
-/*
-KimStudent::KimStudent() {
-    input();
-}
-*/
-

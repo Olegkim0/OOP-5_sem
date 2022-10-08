@@ -1,8 +1,6 @@
 #include "pch.h"
 #include "framework.h"
 
-#pragma region MFC Serialization
-
 KimGroup::KimGroup()
 {
 }
@@ -32,14 +30,27 @@ void KimGroup::output()
 		(*i)->output();
 }
 
-void KimGroup::readFromFile(std::string file_name) {
-	vectorOfStudents.clear();
-	CFile file((LPCTSTR)(file_name.c_str()), CFile::modeRead);
+void KimGroup::writeToFile(std::string fileName) {
+	CFile file((LPCTSTR)(fileName.c_str()), CFile::modeCreate | CFile::modeWrite);
+	CArchive arch(&file, CArchive::store);
+	arch << vectorOfStudents.size();
+	for (auto student : vectorOfStudents) {
+		KimStudent* test = student.get();
+		
+		std::cout << test;
+		std::cout << "\n";
+
+		arch << student.get();
+	}
+	arch.Close();
+	file.Close();
+}
+
+void KimGroup::readFromFile(std::string fileName) {
+	CFile file((LPCTSTR)(fileName.c_str()), CFile::modeRead);
 	CArchive arch(&file, CArchive::load);
 	int size, n;
 	arch >> size;
-
-	// comment if error
 	arch >> n;
 	for (int i = 0; i < size; i++) {
 		KimStudent* student = new KimStudent();
@@ -47,22 +58,11 @@ void KimGroup::readFromFile(std::string file_name) {
 		std::shared_ptr<KimStudent> shared_ukaz(student);
 		vectorOfStudents.push_back(shared_ukaz);
 	}
-
-	arch.Close();
-	file.Close();
-}
-
-void KimGroup::writeToFile(std::string file_name) {
-	CFile file((LPCTSTR)(file_name.c_str()), CFile::modeCreate | CFile::modeWrite);
-	CArchive arch(&file, CArchive::store);
-	arch << vectorOfStudents.size();
-	for (auto student : vectorOfStudents)  arch << student.get();
 	arch.Close();
 	file.Close();
 }
 
 void KimGroup::clear()
 {
-	for (auto student : vectorOfStudents) *student;
 	vectorOfStudents.clear();
 }

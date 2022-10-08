@@ -22,12 +22,6 @@ public:
 
 	virtual void output();
 
-	// void writeToFile(std::ofstream& fileName);
-	virtual void writeToFile(CFile& file);
-
-	//static KimStudent* readFromFile(std::ifstream& file);
-	static KimStudent* readFromFile(CFile& file);
-
 	virtual void Serialize(CArchive& ar);
 
 };

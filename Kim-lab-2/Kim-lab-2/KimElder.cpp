@@ -20,11 +20,11 @@ void KimElder::input() {
 
 void KimElder::output() {
 	KimStudent::output();
-	std::cout << "scholarship: " << _scholarship << "\n";
+	std::cout << "Scholarship: " << _scholarship << "\n";
 }
 
 void KimElder::Serialize(CArchive& arch) {
-	KimElder::Serialize(arch);
+	KimStudent::Serialize(arch);
 	if (arch.IsStoring()) {
 		arch << _scholarship;
 	}

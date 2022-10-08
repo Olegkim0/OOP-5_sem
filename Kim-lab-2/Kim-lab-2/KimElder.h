@@ -19,8 +19,4 @@ public:
 
 	virtual void Serialize(CArchive& ar);
 
-	virtual void writeToFile(CFile& file);
-
-	static std::shared_ptr<KimStudent> readFromFile(CFile& file);
-
 };

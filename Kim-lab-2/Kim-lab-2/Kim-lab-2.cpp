@@ -1,7 +1,4 @@
-﻿// Kim_Lab-2.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
-#include "pch.h"
+﻿#include "pch.h"
 #include "framework.h"
 #include "Kim-Lab-2.h"
 
@@ -9,39 +6,35 @@
 #define new DEBUG_NEW
 #endif
 
-
-// The one and only application object
-
-CWinApp theApp;
-
-using namespace std;
-
 int main()
 {
-    int nRetCode = 0;
+    KimMenu menu;
+    std::shared_ptr<KimStudent> student;
 
-    HMODULE hModule = ::GetModuleHandle(nullptr);
-
-    if (hModule != nullptr)
-    {
-        // initialize MFC and print and error on failure
-        if (!AfxWinInit(hModule, nullptr, ::GetCommandLine(), 0))
-        {
-            // TODO: code your application's behavior here.
-            wprintf(L"Fatal Error: MFC initialization failed\n");
-            nRetCode = 1;
-        }
-        else
-        {
-            // TODO: code your application's behavior here.
+    while (true) {
+        KimUtils::printMenu();
+        switch (KimUtils::choose(5)) {
+        case 0:
+            std::cout << "\nExit\n";
+            return 0;
+        case 1:
+            menu.addStudent();
+            break;
+        case 2:
+            menu.output();
+            break;
+        case 3:
+            menu.writeToFile();
+            break;
+        case 4:
+            menu.readFromFile();
+            break;
+        case 5:
+            menu.clear();
+            break;
+        default:
+            break;
         }
     }
-    else
-    {
-        // TODO: change error code to suit your needs
-        wprintf(L"Fatal Error: GetModuleHandle failed\n");
-        nRetCode = 1;
-    }
-
-    return nRetCode;
+    return 0;
 }
