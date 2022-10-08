@@ -1,10 +1,8 @@
 #pragma once
-#include "KimGroup.h"
-#include "KimUtils.h"
-#include <iostream>
-#include "KimMenu.h"
+#include "pch.h"
+#include "framework.h"
 
-using namespace std;
+#pragma region MFC Serialization
 
 int main()
 {

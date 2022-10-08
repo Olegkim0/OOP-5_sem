@@ -1,7 +1,6 @@
 #pragma once
-#include <vector>
-#include "KimStudent.h"
-
+#include "pch.h"
+#include "framework.h"
 
 class KimGroup {
 private:
@@ -12,9 +11,9 @@ public:
 
 	void output();
 
-	void readFromFile(std::string fileName);
+	void readFromFile(CFile& file);
 
-	void writeToFile(std::string fileName);
+	void writeToFile(CFile& file);
 
 	void clear();
 };

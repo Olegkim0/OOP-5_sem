@@ -1,16 +1,18 @@
-#include "KimUtils.h"
-#include <iostream>
-#include <string>
+#include "pch.h"
+#include "framework.h"
+
+#pragma region MFC Serialization
 
 void KimUtils::printMenu()
 {
-    std::cout << "\n\nMenu:\n";
-    std::cout << "1. Add Student\n";
-    std::cout << "2. Output\n";
-    std::cout << "3. Write ot file\n";
-    std::cout << "4. Read from file\n";
-    std::cout << "5. Clear\n";
-    std::cout << "0. Exit\n\n";
+    std::cout << "\n\nMenu:\n"
+        << "1. Add Student\n"
+        << "2. Output\n"
+        << "3. Write ot file\n"
+        << "4. Read from file\n"
+        << "5. Clear\n"
+        << "6. Add elder\n"
+        << "0. Exit\n\n";
 }
 
 int KimUtils::inputInteger() {

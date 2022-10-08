@@ -1,4 +1,6 @@
 #pragma once
+#include "pch.h"
+#include "framework.h"
 
 static class KimUtils {
 

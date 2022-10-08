@@ -1,7 +1,6 @@
 #pragma once
-#include <string>
-#include "KimStudent.h"
-#include "KimGroup.h"
+#include "pch.h"
+#include "framework.h"
 
 class KimMenu
 {
@@ -21,4 +20,7 @@ public:
 	void writeToFile();
 
 	void clear();
+
+	void addElder();
 };
+	
